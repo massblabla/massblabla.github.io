@@ -1,0 +1,5 @@
+@import url('CascadiaCode.ttf');
+
+.csstest {
+    font-family: 'Cascadia Code', monospace;
+}
