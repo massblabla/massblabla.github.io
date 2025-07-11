@@ -1,0 +1,139 @@
+/* SPDX-License-Identifier: MIT */
+:root {
+  --background-color: #000f0f;
+  --color: #eeffee;
+  --syntax-keyword: #f47067;
+  --syntax-entity: #dcbdfb;
+  --syntax-constant: #6cb6ff;
+  --syntax-string: #96d0ff;
+  --syntax-variable: #f69d50;
+  --syntax-comment: #768390;
+  --syntax-entity-tag: #8ddb8c;
+  --syntax-storage-modifier-import: #adbac7;
+  --syntax-markup-heading: #316dca;
+  --syntax-markup-list: #eac55f;
+  --syntax-markup-italic: #adbac7;
+  --syntax-markup-bold: #adbac7;
+  --syntax-markup-inserted: #b4f1b4;
+  --syntax-markup-deleted: #ffd8d3;
+}
+.light-theme {
+  --background-color: #f5f5f5;
+  --color: #0d0d11;
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+pre code.hljs::-webkit-scrollbar {
+  width: 12px;
+}
+/*!
+  Theme: posthouse
+  Description: The theme used for posthouse.
+  Author: massblabla
+  Maintainer: @massblabla
+  Updated: 2025-06-06
+*/
+.hljs {
+  background: var(--background-color);
+  color: var(--color);
+}
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: var(--syntax-keyword);
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: var(--syntax-entity);
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: var(--syntax-constant);
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: var(--syntax-string);
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: var(--syntax-variable);
+}
+.hljs-comment,
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: var(--syntax-comment);
+  font-style: italic;
+}
+.hljs-name,
+.hljs-quote,
+.hljs-selector-tag,
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: var(--syntax-entity-tag);
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: var(--syntax-storage-modifier-import);
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: var(--syntax-markup-heading);
+  font-weight: bold;
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: var(--syntax-markup-list);
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: var(--syntax-markup-italic);
+  font-style: italic;
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: var(--syntax-markup-bold);
+  font-weight: bold;
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: var(--syntax-markup-inserted);
+  background-color: #1b4721;
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: var(--syntax-markup-deleted);
+  background-color: #78191b;
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+}

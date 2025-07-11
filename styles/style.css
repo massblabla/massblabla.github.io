@@ -1,0 +1,138 @@
+/* SPDX-License-Identifier: MIT */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@100..900&family=Noto+Sans+Mono:wght@100..900&display=swap");
+
+:root {
+  --background: #0d0d11;
+  --foreground: #20b2aa;
+  --foreground-hover: #df4d55;
+  --pre-border: #dddddd;
+  --pre-color: #f5f5f5;
+  --th-background: #18181b;
+}
+.light-theme {
+  --background: #f5f5f5;
+  --foreground: #df4d55;
+  --foreground-hover: #20b2aa;
+  --pre-border: #18181b;
+  --pre-color: #0d0d11;
+  --th-background: #dddddd;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+}
+
+body {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Noto Sans Mono", "Noto Emoji", sans-serif;
+  font-weight: 500;
+  min-width: 200px;
+  align-self: center;
+}
+
+/* Header and navigation */
+header {
+  display: flex;
+  width: 100%;
+  color: var(--background);
+}
+header img {
+  border-radius: 4px;
+  margin-left: 5%;
+  margin-top: 2.5%;
+  max-width: 35%;
+  height: auto;
+  border: 2px solid var(--foreground);
+}
+header img:hover {
+  border: 2px solid var(--foreground-hover);
+}
+header nav li {
+  display: inline;
+  text-decoration: none;
+}
+header nav a {
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+header nav abbr {
+  text-decoration: underline;
+}
+.right {
+  margin-right: 0.5%;
+  text-align: right;
+}
+#toggleTheme:hover {
+  color: var(--foreground-hover)
+}
+
+/* Utility/helper classes */
+.emoji {
+  font-family: "Noto Emoji", monospace;
+}
+
+/* Main content */
+main {
+  align-content: center;
+}
+.welcome {
+  font-size: 1.25rem;
+  display: flex;
+  text-decoration: none;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  text-align: center;
+}
+
+/* Contents section */
+.contents ul {
+  margin-top: 0.5%;
+  font-size: 1rem;
+  padding: 0;
+}
+.contents li {
+  list-style-type: none;
+  border-top: 2px dashed var(--foreground);
+  margin-bottom: 0.75%;
+}
+.contents li a,
+.contents li span {
+  text-decoration: none;
+}
+.contents li .data {
+  text-decoration: none;
+  float: right;
+}
+.contents li .title {
+  text-align: left;
+  text-decoration: none;
+  font-weight: 700;
+  padding-right: 2rem;
+}
+
+/* Footer */
+footer {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.75%;
+  margin-bottom: 0.75%;
+}
+
+/* Element-specific styles */
+hr {
+  border: 1px solid var(--foreground);
+}
+a:hover {
+  color: var(--foreground-hover);
+}
+abbr:hover {
+  color: var(--foreground-hover);
+}

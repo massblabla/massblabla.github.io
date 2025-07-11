@@ -1,0 +1,74 @@
+/* SPDX-License-Identifier: MIT */
+textarea {
+  color: var(--color);
+  width: 100%;
+  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  box-sizing: border-box;
+  resize: none;
+  scrollbar-width: none;
+  background: var(--background-color);
+  margin: 0 0 20px 0;
+  padding: 5px;
+  border: 1px solid var(--pre-border);
+  overflow-x: auto;
+}
+input {
+  background: var(--background-color) !important;
+  color: var(--color);
+  border: 1px solid var(--pre-border) !important;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  width: 100%;
+  box-sizing: border-box;
+}
+#preview {
+  border-top: 1px solid var(--pre-border);
+  padding-top: 10px;
+  margin-top: 10px;
+  min-height: 1vh;
+  box-sizing: border-box;
+}
+.content>hr {
+  margin-bottom: 0 !important;
+}
+.links {
+  text-align: center;
+  margin: 10px;
+}
+input[type="checkbox"] {
+  width: auto !important;
+  margin-bottom: 10px;
+}
+.postButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+button {
+  background: var(--background-color);
+  border: 1px solid var(--pre-border);
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: transform 0.07s, box-shadow 0.07s;
+}
+button:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+  font-style: italic;
+}
+button:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10) inset;
+}
+
+#postNew {
+  margin-right: 0.5rem;
+}
+#downloadMd {
+  margin-left: 0.5rem;
+}

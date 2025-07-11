@@ -1,0 +1,42 @@
+/* SPDX-License-Identifier: MIT */
+input {
+  background: var(--background-color) !important;
+  color: var(--color);
+  border: 1px solid var(--pre-border) !important;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  width: 100%;
+  box-sizing: border-box;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset !important; /* your background */
+    box-shadow: 0 0 0px 1000px var(--background-color) inset !important;
+    -webkit-text-fill-color: var(--color) !important; /* your text color */
+    transition: background-color 5000s ease-in-out 0s;
+}
+button {
+  background: var(--background-color);
+  border: 1px solid var(--pre-border);
+  cursor: pointer;
+  padding: 5px;
+  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+  font-style: italic;
+}
+#message {
+  color: var(--foreground);
+  font-size: 1.2em;
+  margin: 10px;
+  text-align: center;
+}
+.links {
+  text-align: center;
+  margin: 10px;
+}

@@ -1,0 +1,144 @@
+/* SPDX-License-Identifier: MIT */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--foreground);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.titleborder {
+  border: 2px solid var(--foreground);
+}
+
+.sub {
+  display: block;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+.author,
+.timestamp {
+  display: inline;
+}
+
+.content {
+  padding-top: 8pt;
+  padding-bottom: 8pt;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin: 0 0 7.5px;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.content hr {
+  margin: 20px 0 20px 0;
+}
+
+figure {
+  text-align: center;     /* center the caption text */
+  margin: 20px 0;  
+  border: 2px solid var(--foreground);
+  border-radius: 4px;
+  background-color: var(--th-background) !important;
+}
+
+figure img {
+  width: 100%;
+  border-bottom: 2px solid var(--foreground);
+}
+
+figure figcaption {
+  margin-bottom: 10px;
+  background-color: var(--th-background) !important;
+}
+
+pre {
+  background: var(--background-color);
+  margin: 0.75rem 0 0.75rem 0;
+  padding: 1rem;
+  border: 1px solid var(--pre-border);
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+pre code {
+  color: var(--color);
+}
+
+code {
+  background: var(--background-color);
+  color: var(--color);
+  padding: 2px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.content ul,
+.content ol {
+  padding-left: 3rem;
+}
+
+ul li::marker {
+  content: "•  ";
+}
+
+table {
+  margin: 20px 0;
+  border: 2px solid var(--foreground);
+  border-collapse: collapse;
+}
+
+th {
+  padding: 12px 15px;
+  background-color: var(--th-background);
+  border-bottom: 2px solid var(--foreground);
+  font-weight: 700;
+}
+
+td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--foreground);
+}
+
+blockquote {
+  position: relative;
+  margin: 20px 0;
+  padding: 15px 20px;
+  border-left: 5px solid var(--foreground);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+dl dt {
+  font-weight: 700;
+}
+
+dl dd {
+  margin: 0 0 0 1rem;
+}
+
+img {
+  align-self:center;
+}
