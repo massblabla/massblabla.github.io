@@ -71,7 +71,7 @@ header nav abbr {
   text-align: right;
 }
 #toggleTheme:hover {
-  color: var(--foreground-hover)
+  color: var(--foreground-hover);
 }
 
 /* Utility/helper classes */

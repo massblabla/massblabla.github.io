@@ -51,8 +51,8 @@
 }
 
 figure {
-  text-align: center;     /* center the caption text */
-  margin: 20px 0;  
+  text-align: center; /* center the caption text */
+  margin: 20px 0;
   border: 2px solid var(--foreground);
   border-radius: 4px;
   background-color: var(--th-background) !important;
@@ -140,5 +140,5 @@ dl dd {
 }
 
 img {
-  align-self:center;
+  align-self: center;
 }

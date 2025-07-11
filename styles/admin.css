@@ -2,7 +2,7 @@
 textarea {
   color: var(--color);
   width: 100%;
-  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
   box-sizing: border-box;
   resize: none;
   scrollbar-width: none;
@@ -18,7 +18,7 @@ input {
   border: 1px solid var(--pre-border) !important;
   margin-bottom: 10px;
   padding: 5px;
-  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
   width: 100%;
   box-sizing: border-box;
 }
@@ -29,7 +29,7 @@ input {
   min-height: 1vh;
   box-sizing: border-box;
 }
-.content>hr {
+.content > hr {
   margin-bottom: 0 !important;
 }
 .links {
@@ -51,7 +51,7 @@ button {
   border: 1px solid var(--pre-border);
   cursor: pointer;
   padding: 5px;
-  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
   width: 100%;
   margin-bottom: 10px;
   transition: transform 0.07s, box-shadow 0.07s;
@@ -63,7 +63,7 @@ button:disabled {
 }
 button:active {
   transform: scale(0.96);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.10) inset;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) inset;
 }
 
 #postNew {

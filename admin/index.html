@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <!-- SPDX-License-Identifier: MIT -->
 <html lang="en">
-<head>
-  <title>redirect</title>
-  <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-</head>
-<body>
-  <script>
-    const firebaseConfig = {
-      apiKey: 'AIzaSyA5ye1Jc7ELkWy3T_NkYCRzdfo-av0AZJ0',
-      authDomain: 'posthouse-3e8d5.firebaseapp.com',
-      projectId: 'posthouse-3e8d5',
-      storageBucket: 'posthouse-3e8d5.firebasestorage.app',
-      messagingSenderId: '194283407290',
-      appId: '1:194283407290:web:69212788bccdfbba3eff83',
-      measurementId: 'G-4TSSFBYEW8',
-    };
+  <head>
+    <title>redirect</title>
+    <script src="https://www.gstatic.com/firebasejs/11.9.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  </head>
+  <body>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA5ye1Jc7ELkWy3T_NkYCRzdfo-av0AZJ0",
+        authDomain: "posthouse-3e8d5.firebaseapp.com",
+        projectId: "posthouse-3e8d5",
+        storageBucket: "posthouse-3e8d5.firebasestorage.app",
+        messagingSenderId: "194283407290",
+        appId: "1:194283407290:web:69212788bccdfbba3eff83",
+        measurementId: "G-4TSSFBYEW8",
+      };
 
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
+      firebase.initializeApp(firebaseConfig);
+      const auth = firebase.auth();
 
-    auth.onAuthStateChanged(function(user) {
-      if(!user) {
-        window.location.href = '/admin/login.html';
-      } else {
-        window.location.href = '/admin/postlist.html';
-      }
-    });
-
-  </script>
-</body>
+      auth.onAuthStateChanged(function (user) {
+        if (!user) {
+          window.location.href = "/admin/login.html";
+        } else {
+          window.location.href = "/admin/postlist.html";
+        }
+      });
+    </script>
+  </body>
 </html>

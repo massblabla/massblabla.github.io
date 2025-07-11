@@ -5,22 +5,22 @@ input {
   border: 1px solid var(--pre-border) !important;
   margin-bottom: 10px;
   padding: 5px;
-  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
   width: 100%;
   box-sizing: border-box;
 }
 input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset !important; /* your background */
-    box-shadow: 0 0 0px 1000px var(--background-color) inset !important;
-    -webkit-text-fill-color: var(--color) !important; /* your text color */
-    transition: background-color 5000s ease-in-out 0s;
+  -webkit-box-shadow: 0 0 0px 1000px var(--background-color) inset !important; /* your background */
+  box-shadow: 0 0 0px 1000px var(--background-color) inset !important;
+  -webkit-text-fill-color: var(--color) !important; /* your text color */
+  transition: background-color 5000s ease-in-out 0s;
 }
 button {
   background: var(--background-color);
   border: 1px solid var(--pre-border);
   cursor: pointer;
   padding: 5px;
-  font-family: "Noto Sans Mono", "Noto Emoji",  monospace;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
   width: 100%;
   margin-bottom: 10px;
 }

@@ -1,22 +1,22 @@
 /* SPDX-License-Identifier: MIT */
 const firebaseConfig = {
-  apiKey: 'AIzaSyA5ye1Jc7ELkWy3T_NkYCRzdfo-av0AZJ0',
-  authDomain: 'posthouse-3e8d5.firebaseapp.com',
-  projectId: 'posthouse-3e8d5',
-  storageBucket: 'posthouse-3e8d5.firebasestorage.app',
-  messagingSenderId: '194283407290',
-  appId: '1:194283407290:web:69212788bccdfbba3eff83',
-  measurementId: 'G-4TSSFBYEW8',
+  apiKey: "AIzaSyA5ye1Jc7ELkWy3T_NkYCRzdfo-av0AZJ0",
+  authDomain: "posthouse-3e8d5.firebaseapp.com",
+  projectId: "posthouse-3e8d5",
+  storageBucket: "posthouse-3e8d5.firebasestorage.app",
+  messagingSenderId: "194283407290",
+  appId: "1:194283407290:web:69212788bccdfbba3eff83",
+  measurementId: "G-4TSSFBYEW8",
 };
 
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
-auth.onAuthStateChanged(function(user) {
-  if(user) {
-    document.getElementById('admin').style.display = 'inline';
+auth.onAuthStateChanged(function (user) {
+  if (user) {
+    document.getElementById("admin").style.display = "inline";
   } else {
-    document.getElementById('admin').style.display = 'none';
+    document.getElementById("admin").style.display = "none";
   }
 });
 
@@ -36,28 +36,28 @@ function loadMotd() {
 
   const motdList = [
     //"<em><del>&Topf;&aopf;&lopf;&iopf;&topf;&hopf;&aopf; &Zopf;&aopf;&lopf;&fopf;&aopf; &Nopf;&aopf;&iopf;&fopf;&aopf;&hopf;</del></em>",
-    "<a href=\"/admin/\" class=\"motdlinks\">DO NOT CLICK!</a>",
+    '<a href="/admin/" class="motdlinks">DO NOT CLICK!</a>',
     "Should I call this a posthouse or a blog?",
     "Welcome to the darkest dungeon of&nbsp;<em>massblabla</em>.",
     "Ever tried Linux? If not, try it out!",
     "What's older — Microshaft Winblows or Michaelsoft Binbows?",
     "I have no idea what to put. Sorry.",
-    "<q cite=\"https://parade.com/living/shower-thoughts\">Why aren't iPhone chargers called Apple juice?</q>",
-    "<a href=\"https://www.youtube.com/watch?v=dQw4w9WgXcQ\" class=\"motdlinks\">A blast from the past — click if you dare!</a>",
+    '<q cite="https://parade.com/living/shower-thoughts">Why aren\'t iPhone chargers called Apple juice?</q>',
+    '<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="motdlinks">A blast from the past — click if you dare!</a>',
     "Yes, of course.",
     "It's okay. It's okay.",
     "Chauffeur, chauffeur.",
     "Hey! I have a question: is the Windows 95 startup sound copyrighted? If it is, I’d be sad.",
     "I moved e4. What would you move?",
-    "<q cite=\"https://parade.com/living/shower-thoughts\">Firefly is the opposite of waterfall.</q>",
+    '<q cite="https://parade.com/living/shower-thoughts">Firefly is the opposite of waterfall.</q>',
     "Again, I have no idea what to put. Sorry.",
     "If today is the first of the month, well, that's cool!",
     "What will you choose: posthouse or blog?",
     "Hot take: The Earth is a cube. (I'm joking.)",
     "Hot take: I love the Java programming language. (I'm not joking.)",
-    "<span class=\"emoji\">🇵🇸</span>",
+    '<span class="emoji">🇵🇸</span>',
     "Did you know how huge the set on *The Truman Show* is? I didn’t.",
-    "I think using \"archinstall\" is blasphemy.",
+    'I think using "archinstall" is blasphemy.',
     "&Topf;&hopf;&iopf;&sopf;&nbsp;&iopf;&sopf;&nbsp;&copf;&oopf;&oopf;&lopf;.",
     "If you look at the code, you'll see a hidden MOTD you weren’t supposed to see.",
     "<em>missingno</em>",
@@ -126,7 +126,7 @@ function loadMotd() {
     "0 bugs found. 12 new features accidentally created.",
     "Certified Arch Linux installation trauma survivor.",
     "You don't *run* the terminal. The terminal runs you.",
-    "<span style=\"color: red; font-weight: bold;\">WARNING: This site contains traces of your lost time. Proceed with caution.</span>",
+    '<span style="color: red; font-weight: bold;">WARNING: This site contains traces of your lost time. Proceed with caution.</span>',
     "This MOTD is brought to you by procrastination.",
   ];
   const specialDates = [
@@ -175,7 +175,7 @@ function loadMotd() {
   const index = specialDates.indexOf(date);
   let motd;
 
-  if(index !== -1) {
+  if (index !== -1) {
     motd = specialMotds[index];
   } else {
     motd = motdList[Math.trunc(Math.random() * motdList.length)];
