@@ -64,7 +64,7 @@ figure img {
 }
 
 figure figcaption {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   background-color: var(--th-background) !important;
 }
 
