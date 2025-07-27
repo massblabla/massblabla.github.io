@@ -38,7 +38,7 @@ async function loadList() {
     .then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const post = doc.data();
-        if (post.hide) return; // Skip hidden posts
+        if (post.hide || post.trashed) return; // Skip hidden and trashed posts
         const li = document.createElement("li");
 
         const data = document.createElement("span");
@@ -68,8 +68,8 @@ async function loadList() {
         a.textContent = post.title || doc.id;
         title.appendChild(a);
 
-        li.appendChild(data);
         li.appendChild(title);
+        li.appendChild(data);
         li.appendChild(document.createElement("br"));
 
         ul.appendChild(li);

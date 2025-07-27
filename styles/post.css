@@ -28,6 +28,12 @@
   display: inline;
 }
 
+.last-edited {
+  font-size: 0.875rem;
+  opacity: 50%;
+  font-style: italic;
+}
+
 .content {
   padding-top: 8pt;
   padding-bottom: 8pt;

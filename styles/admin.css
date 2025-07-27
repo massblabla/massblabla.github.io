@@ -36,6 +36,16 @@ input {
   text-align: center;
   margin: 10px;
 }
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family: "Noto Sans Mono", "Noto Emoji", monospace;
+  background: var(--background-color);
+  color: var(--color);
+  border: 1px solid var(--pre-border);
+  box-sizing: border-box;
+}
 input[type="checkbox"] {
   width: auto !important;
   margin-bottom: 10px;
@@ -61,7 +71,7 @@ button:disabled {
   cursor: not-allowed;
   font-style: italic;
 }
-button:active {
+button:active:not(:disabled) {
   transform: scale(0.96);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) inset;
 }
@@ -71,4 +81,20 @@ button:active {
 }
 #downloadMd {
   margin-left: 0.5rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#emptyTrash {
+  margin-right: 0.5rem;
+}
+#restoreAll {
+  margin-right: 0.5rem;
+}
+#deleteSelected {
+  margin-right: 0.5rem;
 }

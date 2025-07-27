@@ -110,12 +110,14 @@ main {
 .contents li .data {
   text-decoration: none;
   float: right;
+  padding-left: 0.5em;
 }
 .contents li .title {
   text-align: left;
   text-decoration: none;
   font-weight: 700;
-  padding-right: 2rem;
+  padding-right: 0.5em;
+  word-break: break-all;
 }
 
 /* Footer */

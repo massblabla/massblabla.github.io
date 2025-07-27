@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>massblabla's posthouse - new post</title>
+    <title>massblabla's posthouse - edit post</title>
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/admin.css" />
     <link rel="stylesheet" href="/styles/post.css" />
@@ -43,7 +43,7 @@
       defer
     ></script>
     <!-- add more languages here. see https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/languages/ -->
-    <script src="/scripts/new.js" defer></script>
+    <script src="/scripts/edit.js" defer></script>
     <script src="/scripts/theme.js" defer></script>
   </head>
   <body>
@@ -86,12 +86,12 @@
         <br />
         <a href="/admin/postlist.html" id="postList">Post list</a>
         <br />
-        <span style="font-weight: bold" id="newPost"
-          >New post (non-admins cannot post)</span
+        <a href="/admin/new.html" id="newPost"
+          >New post (non-admins cannot post)</a
         >
         |
-        <a href="/admin/edit.html" id="editPost"
-          >Edit post (non-admins cannot edit)</a
+        <span style="font-weight: bold" id="editPost"
+          >Edit post (non-admins cannot edit)</span
         >
         |
         <a href="/admin/delete.html" id="deletePost"
@@ -100,34 +100,21 @@
       </div>
       <hr />
       <div class="content">
-        <h2>New post</h2>
-        <h3>Upload a file:</h3>
-        <input
-          type="file"
-          name="mdFile"
-          id="mdFile"
-          accept=".md,text/markdown,text/plain"
-        />
-        <p>or</p>
+        <h2>Edit post</h2>
+        <h3>Select post:</h3>
+        <select name="postSelect" id="postSelect" required></select>
         <h3>Title:</h3>
         <input
           type="text"
           name="postTitle"
           id="postTitle"
-          placeholder="defaults to the file name if you upload a file"
+          placeholder="Title wil appear here"
           required
-        />
-        <h3>Author:</h3>
-        <input
-          type="text"
-          name="postAuthor"
-          id="postAuthor"
-          placeholder="defaults to the local part of your e-mail"
         />
         <h3>Content:</h3>
         <textarea
           id="editor"
-          placeholder="Type **Markdown** here..."
+          placeholder="Markdown code will appear here"
           required
         ></textarea>
         <h3>Preview:</h3>
@@ -138,7 +125,7 @@
         <input type="checkbox" name="postHide" id="postHide" />
         <label for="postHide">Hide post</label>
         <div class="postButtons">
-          <button id="postNew" disabled>Post</button>
+          <button id="postEdit" disabled>Edit</button>
           <button id="downloadMd">Download Markdown</button>
         </div>
       </div>

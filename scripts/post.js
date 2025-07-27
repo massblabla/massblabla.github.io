@@ -93,15 +93,21 @@ async function loadPage() {
   const params = new URLSearchParams(window.location.search);
   const postId = params.get("i");
   if (!postId) {
-    titleDiv.textContent = "Post not found.";
+    titleDiv.textContent = "400 Bad Request.";
+    contentDiv.innerHTML = "Missing required parameter: <code>?i=</code>";
     return;
   }
 
   // Fetch post from Firestore
   try {
     const doc = await postsRef.doc(postId).get();
-    if (!doc.exists) {
-      titleDiv.textContent = "Post not found.";
+    if (doc.data().trashed) {
+      titleDiv.textContent = "403 Forbidden.";
+      contentDiv.innerHTML = `Access denied: This post is unavailable or restricted.`;
+      return;
+    } else if (!doc.exists) {
+      titleDiv.textContent = "404 Not Found.";
+      contentDiv.innerHTML = `Post not found: No post exists for ID <code>?i=${postId}</code>`;
       return;
     }
     const post = doc.data();
@@ -130,6 +136,20 @@ async function loadPage() {
     timestampAbbr.title = timestamp;
     timestampDiv.appendChild(timestampAbbr);
 
+    // Last edited if edited
+    if (post.lastEdited) {
+      const lastEditedSpan = document.createElement("span");
+      lastEditedSpan.className = "last-edited";
+      lastEditedSpan.textContent = " Last edited: ";
+      timestampDiv.appendChild(lastEditedSpan);
+
+      const lastEditedAbbr = document.createElement("abbr");
+      lastEditedAbbr.className = "last-edited";
+      lastEditedAbbr.textContent = `${timeAgo(post.lastEdited.toDate())}`;
+      lastEditedAbbr.title = post.lastEdited.toDate();
+      timestampDiv.appendChild(lastEditedAbbr);
+    }
+
     // Content
     const content = wrapEmojis(markdownToHTML(post.content || ""));
     contentDiv.innerHTML = content;
@@ -156,8 +176,10 @@ async function loadPage() {
       document.title = post.title || postId;
     }
   } catch (error) {
-    titleDiv.textContent = "Error loading post.";
+    titleDiv.textContent = "404 Not Found.";
+    contentDiv.innerHTML = `Post not found: No post exists for ID <code>?i=${postId}</code>`;
     console.error(error);
+    return;
   }
 }
 
