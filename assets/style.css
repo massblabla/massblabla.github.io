@@ -49,18 +49,26 @@
   margin: 0;
 }
 
+.fullmono {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: justify;
+  text-align-last: justify;
+  text-justify: inter-character;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .main {
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-md);
-
-  p {
-    font-family: 'Courier New', Courier, monospace;
+  
+  p {  
     text-align: justify;
-    text-align-last: justify;
-    text-justify: inter-character;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
+    text-align-last: left;   
+    text-justify: inter-word;
     hyphens: auto;
+    line-height: 1.4;
   }
 }
 
